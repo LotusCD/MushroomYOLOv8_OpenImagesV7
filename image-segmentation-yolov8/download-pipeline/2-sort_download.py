@@ -27,8 +27,8 @@ def find_and_copy_mask(file_id, subfolders, masks_directory, destination_folder)
 
 
 def main():
-    data_folder = '..\\open-images-v7\\open-images-v7\\train\\data'
-    masks_directory = '..\\open-images-v7\\open-images-v7\\train\\labels\\masks'
+    data_folder = 'open-images-v7\\open-images-v7\\train\\data'
+    masks_directory = 'open-images-v7\\open-images-v7\\train\\labels\\masks'
     destination_folder = os.path.join(os.getcwd(), 'extracted_masks')
     
     data_files = [f for f in os.listdir(data_folder) if os.path.isfile(os.path.join(data_folder, f))]
