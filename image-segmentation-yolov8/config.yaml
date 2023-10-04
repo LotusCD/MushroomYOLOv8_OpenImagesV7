@@ -1,0 +1,5 @@
+path: C:\\Users\\newHope\\Documents\\Proyectos\\segmentation_tutorial\\image-segmentation-yolov8\\code\\data
+train: images\\train
+val: images\\val
+nc: 1
+names: ['mushroom']

@@ -1,0 +1,11 @@
+95 epochs completed in 5.753 hours.
+Optimizer stripped from runs\segment\train\weights\last.pt, 6.8MB
+Optimizer stripped from runs\segment\train\weights\best.pt, 6.8MB
+
+Validating runs\segment\train\weights\best.pt...
+Ultralytics YOLOv8.0.58  Python-3.11.4 torch-2.0.1+cu118 CUDA:0 (NVIDIA GeForce RTX 3060, 12287MiB)
+YOLOv8n-seg summary (fused): 195 layers, 3258259 parameters, 0 gradients, 12.0 GFLOPs
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95)     Mask(P          R      mAP50  mAP50-95): 100%|████
+                   all        157        164      0.784      0.634      0.703      0.567      0.793       0.64      0.708      0.594
+Speed: 1.2ms preprocess, 10.4ms inference, 0.0ms loss, 2.0ms postprocess per image
+Results saved to runs\segment\train

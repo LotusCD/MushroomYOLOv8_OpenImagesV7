@@ -1,0 +1,9 @@
+.venv
+open-images-v7
+download_fungus
+extracted_masks
+test_data_images
+training_data_images
+image-segmentation-yolov8/code/data/
+tmp/
+ExtractDataTmp/
