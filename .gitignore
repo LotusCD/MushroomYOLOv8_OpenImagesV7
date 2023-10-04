@@ -7,3 +7,4 @@ training_data_images
 image-segmentation-yolov8/code/data/
 tmp/
 ExtractDataTmp/
+code/images/
