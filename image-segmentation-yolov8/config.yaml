@@ -1,4 +1,4 @@
-path: C:\\Users\\newHope\\Documents\\Proyectos\\segmentation_tutorial\\image-segmentation-yolov8\\code\\data
+path: C:\\Users\\newHope\\Documents\\Proyectos\\segmentation_tutorial\\image-segmentation-yolov8\\code
 train: images\\train
 val: images\\val
 nc: 1

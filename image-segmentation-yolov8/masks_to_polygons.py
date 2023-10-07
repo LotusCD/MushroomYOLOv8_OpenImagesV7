@@ -3,15 +3,21 @@ import cv2
 from pathlib import Path
 
 # Using pathlib to define paths
-input_dir = Path('./tmp/masks')
-output_dir = Path('./tmp/labels')
+input_dir = Path('tmp/masks')
+output_dir = Path('tmp/labels')
 
 print("Mask to polygons started")
 
 # Ensure output directory exists
 output_dir.mkdir(parents=True, exist_ok=True)
+print("OUTPUT: ",  output_dir) # OUTPUT:  tmp/labels
+print("INPUT: ", input_dir) # INPUT:  tmp/masks
+
+print(os.getcwd())
+
 
 for j in input_dir.iterdir():
+    print("J: ", input_dir)
     # Only process files, not directories
     if not j.is_file():
         continue
