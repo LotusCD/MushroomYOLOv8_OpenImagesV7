@@ -3,7 +3,7 @@
 # This script prepares and organizes datasets...
 
 set_and_sort_download() {
-    #python3 set_download.py
+    python3 set_download.py
     python3 sort_download.py
 }
 
@@ -18,7 +18,7 @@ prepare_masks() {
     python3 masks_to_polygons.py
 
     # after running the script, clean the tmp/masks folder
-    pwd
+    #pwd
     rm -r "tmp/masks"
     
     mkdir -p download-pipeline/extracted_labels
@@ -40,8 +40,8 @@ prepare_train_test_data() {
     rsync -av "$extracted_labels_folder" "$training_labels_folder"
     rsync -av "$data_images_folder" "$training_images_folder"
     
-    local test_images=$(ls "$training_images_folder" | tail -n 30)
-    local test_labels=$(ls "$training_labels_folder" | tail -n 30)
+    local test_images=$(ls "$training_images_folder" | tail -n 300)
+    local test_labels=$(ls "$training_labels_folder" | tail -n 300)
     
     for image in $test_images; do
         mv "$training_images_folder/$image" "$test_images_folder/$image"
@@ -52,9 +52,9 @@ prepare_train_test_data() {
     done
 
     #after finishing, clean unused images and labels
-    pwd
-    rm -r "/extracted_labels"
-    rm -r "/extracted_masks"
+    # pwd
+    # rm -r "/extracted_labels"
+    # rm -r "/extracted_masks"
 
 }
 
