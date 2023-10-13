@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Image Prediction</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+        <h2 class="mb-3">Upload an Image for Prediction</h2>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <div class="custom-file mb-3">
+                <input type="file" name="file" class="custom-file-input" id="customFile" required>
+                <label class="custom-file-label" for="customFile">Choose file</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Upload and Predict</button>
+        </form>
+        {% if uploaded_filename and predictions %}
+            <hr>
+            <h4>Prediction Results:</h4>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Uploaded Image</h5>
+                    <img src="{{ url_for('static', filename='uploads/' + uploaded_filename) }}" alt="Uploaded Image" class="img-fluid mb-3">
+                </div>
+                <div class="col-md-6">
+                    <h5>Predicted Image</h5>
+                    {% for prediction in predictions %}
+                        <img src="{{ url_for('static', filename='output/' + prediction.split('/')[-1]) }}" alt="Prediction Image" class="img-fluid mb-3">
+                    {% endfor %}
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <!-- Optional: Add JavaScript for better file input handling -->
+    <script>
+        document.querySelector('.custom-file-input').addEventListener('change', function (e) {
+            var fileName = document.getElementById("customFile").files[0].name;
+            var nextSibling = e.target.nextElementSibling;
+            nextSibling.innerText = fileName;
+        });
+    </script>
+  </body>
+</html>
