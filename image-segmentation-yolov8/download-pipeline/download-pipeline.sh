@@ -40,8 +40,8 @@ prepare_train_test_data() {
     rsync -av "$extracted_labels_folder" "$training_labels_folder"
     rsync -av "$data_images_folder" "$training_images_folder"
     
-    local test_images=$(ls "$training_images_folder" | tail -n 300)
-    local test_labels=$(ls "$training_labels_folder" | tail -n 300)
+    local test_images=$(ls "$training_images_folder" | tail -n 201)
+    local test_labels=$(ls "$training_labels_folder" | tail -n 201)
     
     for image in $test_images; do
         mv "$training_images_folder/$image" "$test_images_folder/$image"
