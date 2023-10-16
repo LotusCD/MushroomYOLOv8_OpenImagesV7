@@ -1,10 +1,32 @@
-### Segmentation
 
+### Interactive Segmentation Visualization
 
-![alt text](Animation.gif)
+This project includes a mini-application built with Flask, allowing for interactive visualization of image segmentation. The application provides a user-friendly interface where you can upload images and view the model's segmentation predictions, facilitating more tangible interaction with the model's capabilities.
 
+#### Running the Flask Application
 
-# Data Preparation and Processing Pipeline
+To launch the application, navigate to the directory containing `app.py` and execute the following command:
+
+```sh
+python app.py
+```
+
+This command starts a local development server, making the application accessible via a web browser at the address `http://127.0.0.1:5000/` or `http://localhost:5000/`.
+
+#### Using the Application
+
+Once you access the application, you'll find an option to upload an image. After uploading, the system processes the image, and the segmentation model generates predictions, displaying the segmented regions of the image.
+
+The application is structured as follows:
+
+- `app.py`: The main file that runs the Flask server and handles the uploading and processing of images.
+- `predict.py`: Responsible for processing the uploaded images through the YOLO model and generating segmentation predictions.
+
+Both these scripts utilize functions from the YOLOv8 model for image segmentation, ensuring accurate and efficient predictions.
+
+![Interactive Segmentation](Animation.gif)
+
+### Data Preparation and Processing Pipeline
 
 This repository contains scripts for setting up and processing datasets to prepare for machine learning training. The pipeline involves downloading datasets, sorting and organizing data, preparing masks, and setting up training and testing datasets.
 
