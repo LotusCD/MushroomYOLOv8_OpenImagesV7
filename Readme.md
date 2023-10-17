@@ -1,6 +1,8 @@
 
 ### Interactive Segmentation Visualization
 
+![Interactive Segmentation](Animation.gif)
+
 This project includes a mini-application built with Flask, allowing for interactive visualization of image segmentation. The application provides a user-friendly interface where you can upload images and view the model's segmentation predictions, facilitating more tangible interaction with the model's capabilities.
 
 #### Running the Flask Application
@@ -23,8 +25,6 @@ The application is structured as follows:
 - `predict.py`: Responsible for processing the uploaded images through the YOLO model and generating segmentation predictions.
 
 Both these scripts utilize functions from the YOLOv8 model for image segmentation, ensuring accurate and efficient predictions.
-
-![Interactive Segmentation](Animation.gif)
 
 ### Data Preparation and Processing Pipeline
 
