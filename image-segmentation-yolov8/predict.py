@@ -3,9 +3,9 @@ from ultralytics import YOLO
 import cv2
 
 
-model_path = 'C:\\Users\\newHope\\Documents\\Proyectos\\segmentation_tutorial\\image-segmentation-yolov8\\runs\\segment\\train\\weights\\last.pt'
+model_path = 'C:\\Users\\UserName\\Documents\\Proyectos\\segmentation_tutorial\\image-segmentation-yolov8\\runs\\segment\\train\\weights\\last.pt'
 
-image_path = 'C:\\Users\\newHope\\Downloads\\Fungus\\Amanita_muscaria_(1)_(8692325426).jpg'
+image_path = 'C:\\Users\\UserName\\Downloads\\Fungus\\Amanita_muscaria_(1)_(8692325426).jpg'
 
 img = cv2.imread(image_path)
 H, W, _ = img.shape
